@@ -3,11 +3,14 @@ package internal
 import (
 	"github.com/name5566/leaf/module"
 	"server/base"
+	"math/rand"
+	"time"
 )
 
 var (
 	skeleton = base.NewSkeleton()
 	ChanRPC  = skeleton.ChanRPCServer
+	randNo   = rand.New(rand.NewSource(time.Now().UnixNano()))
 )
 
 type Module struct {

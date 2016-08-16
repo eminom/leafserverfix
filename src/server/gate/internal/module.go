@@ -25,3 +25,6 @@ func (m *Module) OnInit() {
 		AgentChanRPC:    game.ChanRPC,
 	}
 }
+
+//在这里实现Module.OnDestroy并不稀奇...
+//但是在父类中实现?? (从语意来讲, 的确是继承了!) 如果把此处Module视为gate.Gate的指针, 那么调用方法.OnDestroy也是成立的. 
